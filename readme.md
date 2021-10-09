@@ -79,4 +79,4 @@ add_action( 'customize_register', 'kia_customizer' );
 
 ## Credits
 
-Huge props to Rich Tabor's [Login Designer](https://github.com/thatplugincompany/login-designer) and Per Soderlind's [Customizer Range Value](https://github.com/soderlind/class-customizer-range-value-control)
+Huge props to Rich Tabor's [Login Designer](https://github.com/thatplugincompany/login-designer) and Per Soderlind's [Customizer Range Value Control](https://github.com/soderlind/class-customizer-range-value-control)
