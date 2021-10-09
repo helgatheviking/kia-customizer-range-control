@@ -1,0 +1,5 @@
+scss/ export-ignore
+composer.json export-ignore
+package.json export-ignore
+readme.md export-ignore
+phpcs.xml export-ignore

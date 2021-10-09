@@ -1,0 +1,49 @@
+{
+	"name": "helgatheviking/kia-customizer-range-control",
+	"type": "wordpress-dropin",
+	"license": "GPL-3.0-or-later",
+	"description": "A Range Slider Control for the WordPress Customizer.",
+	"homepage": "https://github.com/helgatheviking/kia-customizer-range-control",
+	"authors": [
+		{
+			"name": "Kathy Darling",
+			"homepage": "https://kathyisawesome.com"
+		}
+	],
+	"keywords": [
+		"wordpress",
+		"wp",
+		"customizer",
+		"control"
+	],
+	"support": {
+		"issues": "https://github.com/helgatheviking/kia-customizer-range-control/issues"
+	},
+	"require": {
+		"php": ">=7.4",
+		"composer/installers": "~2.0"
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "^3.3",
+		"dealerdirect/phpcodesniffer-composer-installer": "*",
+		"wp-coding-standards/wpcs": "*"
+	},
+	"scripts": {
+		"phpcs": [
+			"phpcs . -s -p -n"
+		],
+		"phpcs-pre-commit": [
+		  "phpcs . -s -p -n"
+		],
+		"phpcb": [
+			"phpcbf ."
+		]
+	  },
+	  "extra": {
+		  "installer-name": "kia-customizer-range-control",
+		  "scripts-description": {
+			  "phpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
+			  "phpcb": "Fix coding standards warnings/errors automatically with PHP Code Beautifier"
+		}
+	  }
+}

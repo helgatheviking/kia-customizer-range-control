@@ -1,0 +1,28 @@
+{
+  "name": "kia-customizer-range-control",
+  "version": "1.0.0",
+  "description": "WordPress Customizer Range Control",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css --outputStyle=compressed",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "minify": "rm -f js/script.min.js && uglifyjs js/script.js --compress --mangle --warn --output js/script.min.js",
+    "build": "npm run build-css && npm run minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/helgatheviking/customizer-range-control"
+  },
+  "keywords": [
+    "customizer",
+    "wordpress",
+    "control"
+  ],
+  "author": "helgatheviking",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.13",
+    "uglify-js": "^3.14.2"
+  }
+}

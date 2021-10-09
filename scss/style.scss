@@ -1,0 +1,75 @@
+// Colors.
+$white: #fff;
+$customizer_blue: #007cba;
+$gray: #c2c2c2;
+
+.customize-control-kia-range {
+
+    .kia-range {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        &__number-input[type="number"] {
+            background: $customizer_blue;
+            border: none;
+            box-shadow: none !important;
+            color: $white;
+            appearance: textfield;
+            padding: .5em;
+            border-radius: .25em;
+            text-align: center;
+            width: 3em;
+        }
+
+        &__track {
+            appearance: none;
+            margin: 0;
+            padding: 0;
+            background: $gray;
+            height: .875em;
+            border-radius: .5em;
+            width: calc(100% - 5em);
+            margin: auto;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::-moz-range-thumb,
+            &::-webkit-slider-thumb {
+                appearance: none;
+                background: $customizer_blue;
+                border-radius: 50%;
+                border: 0;
+                box-shadow: none;
+                cursor: pointer;
+                height: 1.5em;
+                width: 1.5em;
+            }
+
+        }
+
+        &__reset {
+            cursor: pointer;
+            height: 1em;
+            width: 1em;
+            margin-top: 1em;
+
+            &:after {
+                content: "\f531";
+                cursor: pointer;
+                font: 100 1em/1 dashicons;
+                display: inline-block;
+            }
+
+            &:active {
+                transform: scale(0.95);
+            }
+        }
+
+    }
+}
+
+
