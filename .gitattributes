@@ -1,5 +1,14 @@
+# git files
+.gitattributes export-ignore
+.gitignore export-ignore
+
+# sass files
 scss/ export-ignore
+
+# general text files
+readme.md export-ignore
+
+# config files
+phpcs.xml export-ignore
 composer.json export-ignore
 package.json export-ignore
-readme.md export-ignore
-phpcs.xml export-ignore
