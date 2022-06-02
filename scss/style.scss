@@ -3,7 +3,7 @@ $white: #fff;
 $customizer_blue: #007cba;
 $gray: #c2c2c2;
 
-.customize-control-kia-range {
+.customize-control.customize-control-kia-range {
 
     .kia-range {
 
@@ -25,13 +25,12 @@ $gray: #c2c2c2;
 
         &__track {
             appearance: none;
-            margin: 0;
+            margin: 1em auto;
             padding: 0;
             background: $gray;
             height: .875em;
             border-radius: .5em;
             width: calc(100% - 5em);
-            margin: auto;
 
             &:focus {
                 outline: none;
