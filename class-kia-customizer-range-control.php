@@ -74,7 +74,7 @@ class KIA_Customizer_Range_Control extends \WP_Customize_Control {
 		<# } #>
 
 		<div class="kia-range">
-			<input id="range-{{ data.id }}" type="number" class="kia-range__number-input" value="{{ data.value }}" data-default-value="{{ data.defaultValue }}" {{{ data.link }}} <# if ( data.value ) { #> checked="checked" <# } #> />
+			<input id="range-{{ data.id }}" type="number" class="kia-range__number-input" value="{{ data.value }}" data-default-value="{{ data.defaultValue }}" min="{{ data.input_attrs['min'] }}" max="{{ data.input_attrs['max'] }}" step="{{ data.input_attrs['step'] }}" {{{ data.link }}} <# if ( data.value ) { #> checked="checked" <# } #> />
 			<input type="range" data-input-type="range" class="kia-range__track" value="{{ data.value }}" data-default-value="{{ data.defaultValue }}"  min="{{ data.input_attrs['min'] }}" max="{{ data.input_attrs['max'] }}" step="{{ data.input_attrs['step'] }}" {{{ data.link }}} />
 			 <a type="button" value="reset" class="kia-range__reset"></a>
 		</div>
