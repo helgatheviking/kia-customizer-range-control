@@ -2,7 +2,7 @@
 /**
  * Customizer Range Control.
  *
- * @version 1.1.0
+ * @version 1.1.1
  * @package Kia_Customizer_Range_Control
  */
 
@@ -33,7 +33,7 @@ class KIA_Customizer_Range_Control extends \WP_Customize_Control {
 	 *
 	 * @var string
 	 */
-	private $version = '1.1.0';
+	private $version = '1.1.1';
 
 	/**
 	 * Enqueue scripts/styles.
