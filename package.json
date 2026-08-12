@@ -21,7 +21,7 @@
   "author": "helgatheviking",
   "license": "GPL-3.0",
   "devDependencies": {
-    "uglify-js": "^3.15.5"
     "sass": "^1.102.0",
+    "uglify-js": "^3.19.3"
   }
 }
