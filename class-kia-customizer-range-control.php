@@ -1,11 +1,9 @@
 <?php
 /**
- * Customizer Range Control
- * 
+ * Customizer Range Control.
+ *
  * @version 1.1.0
- * @author Kathy Darling
- * @license GPL-3.0
- * 
+ * @package Kia_Customizer_Range_Control
  */
 
 // Exit if accessed directly.
@@ -18,9 +16,23 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
 	return null;
 }
 
+/**
+ * KIA_Customizer_Range_Control class.
+ */
 class KIA_Customizer_Range_Control extends \WP_Customize_Control {
+
+	/**
+	 * Control type.
+	 *
+	 * @var string
+	 */
 	public $type = 'kia-range';
 
+	/**
+	 * Control version.
+	 *
+	 * @var string
+	 */
 	private $version = '1.1.0';
 
 	/**
@@ -28,8 +40,8 @@ class KIA_Customizer_Range_Control extends \WP_Customize_Control {
 	 */
 	public function enqueue() {
 		$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-		wp_enqueue_script( 'kia-customizer-range-control', $this->abs_path_to_url( dirname( __FILE__ ) . '/js/script' . $suffix . '.js' ), array( 'jquery' ), $this->version, true );
-		wp_enqueue_style( 'kia-customizer-range-control', $this->abs_path_to_url( dirname( __FILE__ ) . '/css/style.css' ), array(), $this->version );
+		wp_enqueue_script( 'kia-customizer-range-control', $this->abs_path_to_url( __DIR__ . '/js/script' . $suffix . '.js' ), array( 'jquery' ), $this->version, true );
+		wp_enqueue_style( 'kia-customizer-range-control', $this->abs_path_to_url( __DIR__ . '/css/style.css' ), array(), $this->version );
 	}
 
 	/**
@@ -76,7 +88,7 @@ class KIA_Customizer_Range_Control extends \WP_Customize_Control {
 		<div class="kia-range">
 			<input id="range-{{ data.id }}" type="number" class="kia-range__number-input" value="{{ data.value }}" data-default-value="{{ data.defaultValue }}" min="{{ data.input_attrs['min'] }}" max="{{ data.input_attrs['max'] }}" step="{{ data.input_attrs['step'] }}" {{{ data.link }}} <# if ( data.value ) { #> checked="checked" <# } #> />
 			<input type="range" data-input-type="range" class="kia-range__track" value="{{ data.value }}" data-default-value="{{ data.defaultValue }}"  min="{{ data.input_attrs['min'] }}" max="{{ data.input_attrs['max'] }}" step="{{ data.input_attrs['step'] }}" {{{ data.link }}} />
-			 <a type="button" value="reset" class="kia-range__reset"></a>
+			<a type="button" value="reset" class="kia-range__reset"></a>
 		</div>
 
 		</label>
@@ -84,11 +96,11 @@ class KIA_Customizer_Range_Control extends \WP_Customize_Control {
 	}
 
 	/**
-	 * Plugin / theme agnostic path to URL
+	 * Plugin / theme agnostic path to URL.
 	 *
 	 * @see https://wordpress.stackexchange.com/a/264870/14546
-	 * @param string $path  file path
-	 * @return string       URL
+	 * @param string $path File path.
+	 * @return string      URL.
 	 */
 	private function abs_path_to_url( $path = '' ) {
 		$url = str_replace(

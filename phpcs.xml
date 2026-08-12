@@ -8,11 +8,16 @@
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 	<exclude-pattern>*/build/*</exclude-pattern>
 
+	<!-- Only check PHP files. -->
+	<arg name="extensions" value="php"/>
+
     <!-- Rules -->
 	<rule ref="WordPress-Extra">
 		<exclude name="Generic.Files.LineEndings.InvalidEOLChar" />
 		<exclude name="Squiz.Commenting.FunctionComment" />
 	</rule>
+
+	<rule ref="WooCommerce-Core" />
 	
     <!-- Configs -->
 	<config name="minimum_supported_wp_version" value="4.7" />
