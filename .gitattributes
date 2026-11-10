@@ -10,5 +10,4 @@ readme.md export-ignore
 
 # config files
 phpcs.xml export-ignore
-composer.json export-ignore
 package.json export-ignore
